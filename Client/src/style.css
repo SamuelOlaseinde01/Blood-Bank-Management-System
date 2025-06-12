@@ -1,0 +1,1516 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Home Section */
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/images/Backgroud-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.home-container > h1 {
+    color: white;
+    opacity: 0.8;
+    font-size: 2.8rem;
+    margin-bottom: -20px;
+}
+
+.home-container > p {
+    font-size: 1.2em;
+    color: white;
+    opacity: 0.6;
+}
+
+.home-links > a {
+    padding: 10px;
+    font-size: 1.6em;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    opacity: 0.6;
+    cursor: pointer;
+    background: none;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 300ms;
+}
+
+.home-links > a:hover {
+    font-size: 1.7em;
+    transition: 300ms;
+}
+
+/* Register Page */
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register {
+    width: 500px;
+    margin: 30px;
+    padding: 30px;
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 5px 0px 56px rgb(233, 229, 229);
+}
+
+.register > h1 {
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register > h1::after {
+    content: "";
+    display: block;
+    border: 1px solid black;
+    width: 40px;
+    height: 0px;
+    text-align: center;
+}
+
+.register > h3 {
+    text-align: center;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-bt {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 5px;
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+.register-bt > select {
+    width: 400px;
+    padding: 10px;
+}
+
+.register-bt > select {
+    cursor: pointer;
+}
+
+.label-container > input {
+    font-size: 1em;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.label-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 5px;
+    width: 400px;
+}
+
+.first-lastname-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.first-lastname {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.first-lastname > input {
+    font-size: 1em;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* Login page*/
+
+.login {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid white;
+    box-shadow: 5px 0px 56px rgb(233, 229, 229);
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login > h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login > h1::after {
+    content: "";
+    display: block;
+    border: 1px solid black;
+    width: 40px;
+    height: 0px;
+    text-align: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-form > input {
+    width: 300px;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.password-container > input {
+    width: 300px;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.visibility {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.visibility > svg:hover {
+    border-radius: 50%;
+    box-shadow: 5px 5px 56px rgb(192, 192, 192);
+}
+
+.link-to-home {
+    color: red;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.admin-login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-login-form > input {
+    width: 300px;
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.admin-login-btn {
+    width: fit-content;
+    background-color: black;
+    color: white;
+    margin: 15px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.submit-btn {
+    width: fit-content;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+
+.submitting-btn {
+    width: fit-content;
+    background-color: rgb(54, 54, 54);;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.signup-submit-btn {
+    width: fit-content;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 5px;
+    transition: 500ms;
+}
+
+.signup-submitting-btn {
+    width: fit-content;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgb(255, 100, 100);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 5px;
+    transition: 500ms;
+}
+
+.admin-login-submitting-btn {
+    width: fit-content;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    margin: 15px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+/* NotFound page */
+
+.notfound-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.notfound {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notfound > h1 {
+    margin: 20px;
+    font-size: 3em;
+}
+
+.notfound > a {
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+/* App Layout */
+
+.app-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.app-nav {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    gap: 5px;
+    padding: 5px;
+    position: fixed;
+    width: 200px;
+}
+
+.app-nav > a {
+    text-decoration: none;
+    color: white;      
+    padding: 10px;
+    transition: 300ms;
+    margin: 5px;
+    border-radius: 10px;    
+}
+
+.app-nav > a:hover {
+    background-color: rgba(255, 72, 72, 0.7);
+    padding: 10px;
+    margin: 5px;
+    transition: 300ms;
+}
+
+.app-outlet {
+    margin-left: 200px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.logout {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+    bottom: 10px;
+    z-index: -999;
+}
+
+.nav-with-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 3px;
+}
+
+.app-nav > h2 {
+    color: white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-nav > h2::after {
+    content: "";
+    border: 1px solid white;
+    width: 20px;
+}
+
+/* Blood Donate Form */
+
+.blood-donate-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    border-radius: 10px;
+}
+
+.blood-donate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 0px 56px rgb(233, 229, 229);
+}
+
+.blood-donate-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 300px;
+}
+
+.blood-donate-label-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+}
+
+.blood-donate-label-form > label {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+    color: red;
+}
+
+.blood-donate-label-form > input {
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    color: red;
+}
+
+.blood-donate-label-form > select:focus{
+    outline: none;
+}
+
+.blood-donate > h2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+.blood-donate > h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: red;
+}
+
+.blood-donate-label-form > select {
+    width: 250px;
+    height: 30px;
+}
+
+/* Message/Warnings */
+
+.message {
+    color: red;
+    width: 300px;
+    text-align: center;
+}
+
+.donor-table {
+    display: flex;
+    padding: 10px;
+    font-size: 14px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donor-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.donor-table > table {
+    padding: 10px;
+}
+
+.donor-table > h2 {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donor-table > h2::after {
+    content: "";
+    width: 14px;
+    height: 1px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.donor-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.donor-table > table > tbody > tr > th {
+    background-color: rgb(217, 50, 50);
+    color: white;
+    padding: 20px 40px;
+    margin: 10px;
+}
+
+.recipient-table {
+    display: flex;
+    padding: 10px;
+    font-size: 14px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipient-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.recipient-table > table {
+    padding: 10px;
+}
+
+.recipient-table > h2 {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipient-table > h2::after {
+    content: "";
+    width: 14px;
+    height: 1px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.recipient-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.recipient-table > table > tbody > tr > th {
+    background-color: rgb(217, 50, 50);
+    color: white;
+    padding: 20px 40px;
+    margin: 10px;
+}
+/* Profile */
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: red;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-details > div {
+    font-size: 1.2em;
+    color: red;
+    display: flex;
+    padding: 5px;
+    gap: 10px;
+    flex-direction: row;
+}
+
+/* Blood donations(admin) */
+
+.blood-donations-table {
+    display: flex;
+    padding: 10px;
+    font-size: 14px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blood-donations-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.blood-donations-table > h2 {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blood-donations-table > h2::after {
+    content: "";
+    width: 14px;
+    height: 1px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.blood-donations-table > table {
+    padding: 10px;
+}
+
+.blood-donations-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.blood-donations-table > table > tbody > tr > th {
+    background-color: rgb(217, 50, 50);
+    color: white;
+    padding: 20px 40px;
+    margin: 10px;
+}
+
+.blood-requests-table {
+    display: flex;
+    padding: 10px;
+    font-size: 14px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blood-requests-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.blood-requests-table > h2 {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blood-requests-table > h2::after {
+    content: "";
+    width: 14px;
+    height: 1px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.blood-requests-table > table {
+    padding: 10px;
+}
+
+.blood-requests-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.blood-requests-table > table > tbody > tr > th {
+    background-color: rgb(217, 50, 50);
+    color: white;
+    padding: 20px 40px;
+    margin: 10px;
+}
+
+.donors-table {
+    display: flex;
+    padding: 10px;
+    font-size: 14px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donors-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.donors-table > h2 {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donors-table > h2::after {
+    content: "";
+    width: 14px;
+    height: 1px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.donors-table > table {
+    padding: 10px;
+}
+
+.donors-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.donors-table > table > tbody > tr > th {
+    background-color: rgb(217, 50, 50);
+    color: white;
+    padding: 20px 40px;
+    margin: 10px;
+}
+
+.donors-table > table > tbody > tr > th > button {
+    background-color: rgb(217, 50, 50);
+    color: white;
+    text-decoration: underline;
+    border: none;
+}
+
+
+.recipients-table {
+    display: flex;
+    padding: 10px;
+    font-size: 14px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipients-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.recipients-table > h2 {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipients-table > h2::after {
+    content: "";
+    width: 14px;
+    height: 1px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.recipients-table > table {
+    padding: 10px;
+}
+
+.recipients-table > table > thead > tr > th {
+    background-color: red;
+    color: white;
+    padding: 10px 40px;
+    margin: 10px;
+}
+
+.recipients-table > table > tbody > tr > th {
+    background-color: rgb(217, 50, 50);
+    color: white;
+    padding: 20px 40px;
+    margin: 10px;
+}
+
+.recipients-table > table > tbody > tr > th > button {
+    background-color: rgb(217, 50, 50);
+    color: white;
+    border: none;
+    text-decoration: underline;
+}
+
+/* Filter button */
+
+.filter-btn {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0px 0px 0px;
+}
+
+.button-all, .button-pending, .button-accepted, .button-rejected {
+    font-size: 12px;
+    border-radius: 20px;
+    border: 1px solid red;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.button-all-clicked, .button-pending-clicked, .button-accepted-clicked, .button-rejected-clicked {
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid red;
+    padding: 10px;
+    transition: 300ms;
+}
+
+.filter-btn > button:hover {
+    background-color: red;
+    color: white;
+    transition: 300ms;
+}
+
+/* Dashboard */
+
+.bloodtype-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);  
+    gap: 10px;
+    margin: 15px;
+}
+
+.bloodtype-box {
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 130px;  
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 0px 10px rgb(226, 226, 226);
+    z-index: -999;
+}
+
+.bloodtype-box > h3 {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: red;
+}
+
+.bloodtype-box > h5 {
+    position: absolute;
+    bottom: 10px;
+    color: red;
+    left: 10px;
+}
+
+.box-blood {
+    width: 20px;
+    height: 20px;
+}
+
+.dashboard > h4 {
+    text-align: left;
+    width: 95%;
+    border-bottom: 1px solid red;
+    height: 23px;
+    margin: 15px;
+    color: red;
+}
+
+.dashboard > h5 {
+    text-align: left;
+    width: 95%;
+    border-bottom: 1px solid red;
+    height: 23px;
+    margin: 15px;
+    color: red;
+}
+
+.dashboard > h3 {
+    text-align: left;
+    margin: 15px;
+    color: red;
+    font-weight: 900;
+}
+
+.totals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);  
+    margin: 15px;
+    gap: 25px;
+}
+
+.totals > div {
+    width: 220px;
+    height: 50px;
+    color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 0px 10px rgb(226, 226, 226);
+    border-radius: 10px;
+}
+
+.profile-container > button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.verify {
+    background-color: black;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.verify-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.verify-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid white;
+    box-shadow: 5px 0px 56px rgb(233, 229, 229);
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.blood-inventory-btns {
+    margin: 40px;
+}
+
+.blood-inventory-btns > a {
+    text-decoration: none;
+    margin: 10px;
+    color: white;
+    background-color: rgb(249, 46, 46);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.add-blood {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid white;
+    box-shadow: 5px 0px 56px rgb(233, 229, 229);
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.add-blood-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.add-blood-label-container {
+    display: flex;
+}
+
+select:focus {
+    outline: none;
+}
+
+.add-blood-label-container {
+    display: flex;
+    gap: 10px;
+}
+
+.add-blood-label-container > select {
+    width: 100px;
+    cursor: pointer;
+}
+
+.add-blood-label-container > input {
+    width: 150px;
+}
+
+.add-blood-btn {
+    background-color: black;
+    color: white;
+    font-size: 0.8em;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+form > .accept-requests {
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+form > .accept-requests:hover {
+    background-color: rgb(255, 61, 61);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+form > .reject-requests:hover {
+    background-color: rgb(255, 61, 61);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+form > .reject-requests {
+    background-color: white;
+    color: red;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+form > .accept-donations {
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+form > .reject-donations {
+    background-color: white;
+    color: red;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+form > .accept-donations:hover {
+    background-color: rgb(255, 61, 61);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+form > .reject-donations:hover {
+    background-color: rgb(255, 61, 61);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.accept-reject {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5); /* optional: darken background */
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 400px;
+    max-width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center horizontally & vertically */
+    background: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.donor-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.donor-details > button {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    width: fit-content;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.donor-details > button:hover {
+    background-color: rgb(228, 228, 228);
+    transition: 300ms;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.recipient-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.recipient-details > button {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    width: fit-content;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.recipient-details > button:hover {
+    background-color: rgb(228, 228, 228);
+    transition: 300ms;
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.count {
+    background-color: white;
+    color: red;
+    border-radius: 50%;
+    font-size: 0.9em;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.active-pending-requests {
+    width: 220px;
+    height: 50px;
+    color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 0px 10px rgb(226, 226, 226);
+    border-radius: 10px;
+    animation-name: animate-pending-requests;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate-pending-requests {
+    0% {
+        background-color: red;
+        color: white;
+    }
+
+    100% {
+        background-color: white;
+        color: red;
+    }
+}
+
+.active-pending-donations {
+    width: 220px;
+    height: 50px;
+    color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 0px 10px rgb(226, 226, 226);
+    border-radius: 10px;
+    animation-name: animate-pending-donations;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate-pending-donations {
+    0% {
+        background-color: red;
+        color: white;
+    }
+
+    100% {
+        background-color: white;
+        color: red;
+    }
+}
+
+.donor-dashboard > h4 {
+    text-align: left;
+    width: 95%;
+    list-style-type: circle;
+    font-weight: 400;
+    height: 23px;
+    margin: 15px;
+    color: red;
+}
+
+.donor-dashboard > h5 {
+    text-align: left;
+    width: 95%;
+    border-bottom: 1px solid red;
+    height: 23px;
+    margin: 15px;
+    color: red;
+}
+
+.donor-dashboard > h3 {
+    text-align: left;
+    margin: 15px;
+    color: red;
+    font-weight: 600;
+}
+
+.donor-dashboard > h2 {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    color: red;
+    font-weight: 600;
+}
+
+.donor-dashboard > h2::after {
+    content: "";
+    background-color: red;
+    width: 50px;
+    height: 3px;
+    font-weight: 600;
+}
+
+.health-tips {
+    margin-top: 20px;
+}
+
+
+
+.health-tips > h3 {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    color: red;
+    font-weight: 600;
+}
+
+.health-tips > ul > li {
+    list-style: circle;
+    color: red;
+    text-align: left;
+    margin: 15px;
+}
+
+
+.recipient-dashboard > h4 {
+    text-align: left;
+    width: 95%;
+    list-style-type: circle;
+    font-weight: 400;
+    height: 23px;
+    margin: 15px;
+    color: red;
+}
+
+.recipient-dashboard > h5 {
+    text-align: left;
+    width: 95%;
+    border-bottom: 1px solid red;
+    height: 23px;
+    margin: 15px;
+    color: red;
+}
+
+.recipient-dashboard > h3 {
+    text-align: left;
+    margin: 15px;
+    color: red;
+    font-weight: 600;
+}
+
+.recipient-dashboard > h2 {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    color: red;
+    font-weight: 700;
+}
+
+.recipient-dashboard > h2::after {
+    content: "";
+    background-color: red;
+    display: flex;
+    width: 40px;
+    height: 3px;
+    font-weight: 600;
+}
+
+.recipient-dashboard-box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);  
+    margin: 15px;
+    gap: 25px;
+}
+
+.recipient-dashboard-box-container > div {
+    width: 300px;
+    height: 150px;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 0px 10px rgb(226, 226, 226);
+    border-radius: 10px;
+}
+
+.donor-dashboard-box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);  
+    margin: 15px;
+    gap: 25px;
+}
+
+.donor-dashboard-box-container > div {
+    width: 300px;
+    height: 150px;
+    color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 0px 10px rgb(226, 226, 226);
+    border-radius: 10px;
+}
+
+.donor-dashboard-box-container > div > h3 {
+    text-align: left;
+    font-size: 2.2em;
+}
+
+.donor-dashboard-box-container > div > h4 {
+    text-align: left;
+    font-size: 1em;
+}
+
+
+.recipient-dashboard-box-container > div > h3 {
+    text-align: left;
+    font-size: 2.2em;
+}
+
+.recipient-dashboard-box-container > div > h4 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1em;
+}

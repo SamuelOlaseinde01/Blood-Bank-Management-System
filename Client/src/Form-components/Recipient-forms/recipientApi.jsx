@@ -4,7 +4,7 @@ function sleep(ms) {
 
 export async function recipientPostRegister(cred) {
     await sleep(1000)
-    const res = await fetch("http://localhost:3000/recipientregister", {method: "POST", headers: {
+    const res = await fetch("https://blood-bank-management-system-0zdu.onrender.com/recipientregister", {method: "POST", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify(cred)})
     const data = await res.json()
@@ -19,7 +19,7 @@ export async function recipientPostRegister(cred) {
 
 export async function recipientPostLogin(creds) {
     await sleep(1000)
-    const res = await fetch("http://localhost:3000/recipientlogin", {method: "POST", headers: {
+    const res = await fetch("https://blood-bank-management-system-0zdu.onrender.com/recipientlogin", {method: "POST", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify(creds)})
     const data = await res.json()
@@ -35,7 +35,7 @@ export async function recipientPostLogin(creds) {
 }
 
 export async function recipientGetCreds(username) {
-    const res = await fetch(`http://localhost:3000/recipientlogin/${username}`)
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/recipientlogin/${username}`)
     const data = await res.json()
     const user = data.user
     if(!res.ok) {
@@ -49,7 +49,7 @@ export async function recipientGetCreds(username) {
 
 export async function bloodRequest(creds) {
     await sleep(1000)
-    const res = await fetch("http://localhost:3000/request", {method: "POST", headers: {
+    const res = await fetch("https://blood-bank-management-system-0zdu.onrender.com/request", {method: "POST", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify(creds)})
     const data = await res.json()
@@ -62,7 +62,7 @@ export async function bloodRequest(creds) {
 }
 
 export async function recipientGetRequests(username) {
-    const res = await fetch(`http://localhost:3000/request/${username}`)
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/request/${username}`)
     const data = await res.json()
     const donation = data
     if(!res.ok) {
@@ -76,7 +76,7 @@ export async function recipientGetRequests(username) {
 
 export async function updateRecipientProfile(cred) {
     await sleep(1000)
-    const res = await fetch(`http://localhost:3000/recipientregister/${cred.id}`, {method: "PATCH", headers: {
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/recipientregister/${cred.id}`, {method: "PATCH", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify(cred)})
     const data = await res.json()
@@ -92,7 +92,7 @@ export async function updateRecipientProfile(cred) {
 
 export async function verifyRecipientsAnswer(creds) {
     await sleep(1000)
-    const res = await fetch("http://localhost:3000/recipientregister/:id/verify-answer", {method: "POST", headers: {
+    const res = await fetch("https://blood-bank-management-system-0zdu.onrender.com/recipientregister/:id/verify-answer", {method: "POST", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify(creds)})
     const data = await res.json()
@@ -107,7 +107,7 @@ export async function verifyRecipientsAnswer(creds) {
 
 export async function verifyRecipientsUsername(creds) {
     await sleep(1000)
-    const res = await fetch("http://localhost:3000/recipientregister/:id/verify-username", {method: "POST", headers: {
+    const res = await fetch("https://blood-bank-management-system-0zdu.onrender.com/recipientregister/:id/verify-username", {method: "POST", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify(creds)})
     const data = await res.json()
@@ -122,7 +122,7 @@ export async function verifyRecipientsUsername(creds) {
 
 export async function changeRecipientsPassword(creds) {
     await sleep(1000)
-    const res = await fetch("http://localhost:3000/recipientregister/:id/reset", {method: "POST", headers: {
+    const res = await fetch("https://blood-bank-management-system-0zdu.onrender.com/recipientregister/:id/reset", {method: "POST", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify(creds)})
     const data = await res.json()
@@ -135,7 +135,7 @@ export async function changeRecipientsPassword(creds) {
 }
 
 export async function getPendingRequestCount(username) {
-    const res = await fetch(`http://localhost:3000/pending-user-requests?username=${username}`);
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/pending-user-requests?username=${username}`);
     const data = await res.json();
 
     if (!res.ok) {
@@ -146,7 +146,7 @@ export async function getPendingRequestCount(username) {
 }
 
 export async function getAcceptedRequestCount(username) {
-    const res = await fetch(`http://localhost:3000/accepted-user-requests?username=${username}`);
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/accepted-user-requests?username=${username}`);
     const data = await res.json();
 
     if (!res.ok) {
@@ -157,7 +157,7 @@ export async function getAcceptedRequestCount(username) {
 }
 
 export async function getRejectedRequestCount(username) {
-    const res = await fetch(`http://localhost:3000/rejected-user-requests?username=${username}`);
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/rejected-user-requests?username=${username}`);
     const data = await res.json();
 
     if (!res.ok) {
@@ -168,7 +168,7 @@ export async function getRejectedRequestCount(username) {
 }
 
 export async function getLastRequest(username) {
-    const res = await fetch(`http://localhost:3000/request/${username}/last`);
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/request/${username}/last`);
     const data = await res.json();
     if (!res.ok) {
         throw new Error(data.message || "Failed to fetch count");

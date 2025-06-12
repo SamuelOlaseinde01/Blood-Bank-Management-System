@@ -3,7 +3,7 @@ function sleep(ms) {
 }  
 
 export async function getAllDonations() {
-    const res = await fetch(`http://localhost:3000/donate/all`)
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/donate/all`)
     const data = await res.json()
     const donation = data
     if(!res.ok) {
@@ -16,7 +16,7 @@ export async function getAllDonations() {
 }
 
 export async function getAllRequests() {
-    const res = await fetch(`http://localhost:3000/request/all`)
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/request/all`)
     const data = await res.json()
     const requests = data
     if(!res.ok) {
@@ -29,7 +29,7 @@ export async function getAllRequests() {
 }
 
 export async function updateRequestStatus({ rId, rStatus }) {
-    const res = await fetch(`http://localhost:3000/request/all/${rId}`, {method: "PATCH", headers: {
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/request/all/${rId}`, {method: "PATCH", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify({status: rStatus})})
     const data = await res.json()
@@ -43,7 +43,7 @@ export async function updateRequestStatus({ rId, rStatus }) {
 }
 
 export async function updateDonationStatus({ rId, rStatus }) {
-    const res = await fetch(`http://localhost:3000/donate/all/${rId}`, {method: "PATCH", headers: {
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/donate/all/${rId}`, {method: "PATCH", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify({status: rStatus})})
     const data = await res.json()
@@ -57,7 +57,7 @@ export async function updateDonationStatus({ rId, rStatus }) {
 }
 
 export async function getAllDonors() {
-    const res = await fetch(`http://localhost:3000/donorregister/all`)
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/donorregister/all`)
     const data = await res.json()
     const donors = data
     if(!res.ok) {
@@ -70,7 +70,7 @@ export async function getAllDonors() {
 }
 
 export async function getAllRecipients() {
-    const res = await fetch(`http://localhost:3000/recipientregister/all`)
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/recipientregister/all`)
     const data = await res.json()
     const donors = data
     if(!res.ok) {
@@ -83,7 +83,7 @@ export async function getAllRecipients() {
 }
 
 export async function getBloodTypes() {
-    const res = await fetch(`http://localhost:3000/bloodTypes`)
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/bloodTypes`)
     const data = await res.json()
     if(!res.ok) {
         throw {
@@ -96,7 +96,7 @@ export async function getBloodTypes() {
 
 export async function addBloodStock(cred) {
     await sleep(1000)
-    const res = await fetch(`http://localhost:3000/bloodTypes/add`, {method: "PATCH", headers: {
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/bloodTypes/add`, {method: "PATCH", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify(cred)})
     const data = await res.json()
@@ -111,7 +111,7 @@ export async function addBloodStock(cred) {
 
 export async function removeBloodStock(cred) {
     await sleep(1000)
-    const res = await fetch(`http://localhost:3000/bloodTypes/remove`, {method: "PATCH", headers: {
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/bloodTypes/remove`, {method: "PATCH", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify(cred)})
     const data = await res.json()
@@ -126,7 +126,7 @@ export async function removeBloodStock(cred) {
 
 export async function adminLogin(cred) {
     await sleep(1000)
-    const res = await fetch(`http://localhost:3000/adminlogin`, {method: "POST", headers: {
+    const res = await fetch(`https://blood-bank-management-system-0zdu.onrender.com/adminlogin`, {method: "POST", headers: {
         "Content-type": "application/json"
     }, body: JSON.stringify(cred)})
     const data = await res.json()
@@ -142,7 +142,7 @@ export async function adminLogin(cred) {
 }
 
 export async function getPendingRequests() {
-    const res = await fetch("http://localhost:3000/pending-requests")
+    const res = await fetch("https://blood-bank-management-system-0zdu.onrender.com/pending-requests")
     const data = await res.json()
     if(!res.ok) {
         throw {
@@ -154,7 +154,7 @@ export async function getPendingRequests() {
 }
 
 export async function getPendingDonations() {
-    const res = await fetch("http://localhost:3000/pending-donations")
+    const res = await fetch("https://blood-bank-management-system-0zdu.onrender.com/pending-donations")
     const data = await res.json()
     if(!res.ok) {
         throw {

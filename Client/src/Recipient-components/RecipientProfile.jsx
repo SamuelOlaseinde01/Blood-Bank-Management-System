@@ -66,7 +66,7 @@ export default function RecipientProfile() {
                     <h3>Profile</h3>
                 </div>
                 <div className="profile-details">
-                    <img style={{width: "100px", height: "100px"}} src="./images/user.png" alt="" />
+                    <img style={{width: "100px", height: "100px"}} src="/images/user.png" alt="" />
                     <div>
                         <h4>Full name: </h4>
                         <span>{`${user.firstName} ${user.lastName}`}</span>

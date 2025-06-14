@@ -30,7 +30,7 @@ export default function BloodInventory() {
     const allBloodTypes = data[0]
     const displayBloodType = allBloodTypes.map((item) => (
         <div className="bloodtype-box" key={item.type}>
-            <h3>{item.type}<img className="box-blood" src="./images/blood-drop.png"/></h3>
+            <h3>{item.type}<img className="box-blood" src="/images/blood-drop.png"/></h3>
             <h5>{item.units}</h5>
         </div>
     ))

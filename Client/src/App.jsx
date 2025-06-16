@@ -36,6 +36,8 @@ import VerifyRecipientUsername, {action as verifyRecipientUsernameAction} from "
 import "./style.css"
 import VerifyDonorAnswer, {action as verifyDonorsAnswer, loader as verifyDonorsAnswerLoader} from "./Form-components/Donor-forms/VerifyDonorAnswer";
 import VerifyRecipientAnswer, {action as verifyRecipientAnswerAction, loader as verifyRecipientAnswerLoader} from "./Form-components/Recipient-forms/VerifyRecipientAnswer";
+import ErrorBoundary from "./ErrorBoundary";
+import ErrorBoundaryFallback from "./ErrorBoundaryFallback";
 
 function App() {
 const router = createBrowserRouter(createRoutesFromElements(
@@ -52,7 +54,7 @@ const router = createBrowserRouter(createRoutesFromElements(
           <Route path="/verify-recipient-answer" element={<VerifyRecipientAnswer/>} action={verifyRecipientAnswerAction} loader={verifyRecipientAnswerLoader}/>
           <Route path="/change-recipient-password" element={<ChangeRecipientPassword/>} action={changeRecipientPasswordAction} loader={changeRecipientPasswordLoader}/>
           <Route path="/admin-login" element={<AdminLogin />} action={adminAction} loader={loginLoader}/>
-          <Route path="/donor" element={<DonorLayout/>}  loader={
+          <Route path="/donor" element={<DonorLayout/>} errorElement={<ErrorBoundaryFallback/>}   loader={
             async () => await authDonor()
           }>
             <Route index element={<DonorDashboard/>} loader={donorDashboardLoader}/>
@@ -60,7 +62,7 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route path="history" element={<DonorHistory />} loader={donorHistoryLoader}/>
             <Route path="profile" element={<DonorProfile />} loader={donorProfileLoader} action={donorProfileAction}/>
           </Route>
-          <Route path="/recipient" element={<RecipientLayout />} loader={
+          <Route path="/recipient" element={<RecipientLayout />} errorElement={<ErrorBoundaryFallback/>}   loader={
             async () => await authRecipient()
           }>
             <Route index element={<RecipientDashboard />} loader={recipientDashboardLoader}/>
@@ -68,7 +70,7 @@ const router = createBrowserRouter(createRoutesFromElements(
             <Route path="history" element={<RecipientHistory />} loader={recipientHistoryLoader} />
             <Route path="profile" element={<RecipientProfile />} loader={recipientProfileLoader} action={recipientProfileAction}/>
           </Route>
-          <Route path="/admin" element={<AdminLayout/>} loader={adminLayoutLoader}>
+          <Route path="/admin" element={<AdminLayout/>} errorElement={<ErrorBoundaryFallback/>}  loader={adminLayoutLoader}>
             <Route index element={<AdminDashboard />} loader={adminDashboardLoader}/>
             <Route path="donations" element={<BloodDonations />} loader={bloodDonationsLoader} action={bloodDonationsAction}/>
             <Route path="blood-requests" element={<BloodRequests />} loader={bloodRequestsLoader} action={bloodRequestsAction}/>
@@ -84,7 +86,9 @@ const router = createBrowserRouter(createRoutesFromElements(
 
 return (
   <>
-    <RouterProvider router={router}/>
+    <ErrorBoundary>
+      <RouterProvider router={router}/>
+    </ErrorBoundary>
     <ToastContainer limit={1} autoClose={3000}/>
   </>
 )
